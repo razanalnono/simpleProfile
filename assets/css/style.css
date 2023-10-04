@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #008aaa;
+  --secondary-color: #D1884F;
+  --third-color: #3bbadb;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+body .toggle {
+  color: var(--primary-color);
+  position: absolute;
+  font-size: 25px;
+  display: none;
+}
+
+.navbar {
+  padding: 2.8rem 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.navbar ul li {
+  width: fit-content;
+  margin-left: 3rem;
+}
+
+.navbar ul li a {
+  color: black;
+  font-size: 17px;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+
+.navbar ul li a i {
+  font-weight: 600;
+  margin-right: 7px;
+}
+
+.navbar ul li .active {
+  color: var(--secondary-color);
+}
+
+.navbar ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.main {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.main .content h5 {
+  color: var(--third-color);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.main .content h5::first-letter {
+  text-transform: capitalize;
+}
+
+.main .content h1 {
+  text-transform: capitalize;
+  color: var(--primary-color);
+  width: 80%;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  margin: 1.5rem 0;
+}
+
+.main .content h1 span {
+  color: var(--secondary-color);
+}
+
+.main .content p {
+  width: 70%;
+  margin-bottom: 1.5rem;
+}
+
+.main .content p::first-letter {
+  text-transform: capitalize;
+}
+
+.main .content p a {
+  text-transform: capitalize;
+  color: var(--third-color);
+}
+.text {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  position: relative;
+}
+
+.show-more-checkbox {
+  display: none;
+}
+
+.show-more-label {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.show-more-label::after {
+  content: 'See more';
+  color: blue;
+}
+
+.show-more-checkbox:checked~.extra {
+  max-height: none;
+}
+
+.extra {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.main .content .hireBtn {
+  color: white;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  padding: 0.3rem 1.2rem;
+  border-radius: 5px;
+  margin-right: 2rem;
+  box-shadow: 0 10px 5px rgb(0, 138, 170, 0.3);
+  transition: all 0.3s;
+}
+.main .content .hireBtn:hover {
+  color: var(--primary-color);
+  background-color: white;
+}
+
+.main .content .projectBtn {
+  color: var(--primary-color);
+  border: solid 1px var(--primary-color);
+  text-transform: capitalize;
+  padding: 0.3rem 1.2rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.main .content .projectBtn:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.main figure {
+  width: 50%;
+}
+
+.main .profile {
+  width: 100%;
+  border-bottom-left-radius: 50%;
+  box-shadow: -20px 10px 0 rgb(159 120 139);;
+}
